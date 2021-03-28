@@ -1,7 +1,19 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+import api from "../../api";
 import "./style.css";
+
 export default function Cardrepos({ repos }) {
   console.log(repos);
+  const [languages, setLanguages] = useState();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    const response = await api.get(
+      `https://api.github.com/repos/${repos.owner.login}/${repos.name}/languages`
+      );
+      console.log(response)
+  }, []);
 
   return (
     <motion.div

@@ -1,6 +1,8 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import "./style.css";
+
+
 
 export default function Modal({ mensagem }) {
   const [close, setClose] = useState(false);
@@ -9,7 +11,7 @@ export default function Modal({ mensagem }) {
       className="modal"
       initial={{visibility:"hidden"}}
       animate={{
-        left: !close ? [-400, 10] : [10, -400],
+        left: !close ? [-400, 20] : [20, -400],
       visibility:"visible"
       }}
       transition={{ duration: 1 }}

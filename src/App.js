@@ -14,7 +14,7 @@ function App() {
   const [input, setInput] = useState("");
   const [repos, setRepos] = useState([]);
   const [openModal, setOpenModal] = useState(false);
-  const [mensagemError, setMensagemError] = useState("eroooo");
+  const [mensagemError, setMensagemError] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function getApi(e) {
@@ -52,9 +52,9 @@ function App() {
       >
         <motion.input
           initial="hidden"
+          placeholder="Login do GitHub"
           animate={{ scale: [0, 1] }}
           transition={{ delay: 1, duration: 1 }}
-          id="UserName"
           type="text"
           value={input}
           onChange={(e) => {

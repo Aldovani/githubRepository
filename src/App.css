@@ -38,6 +38,10 @@ p {
   width: 300px;
   box-sizing: border-box;
 }
+.form input::placeholder{
+  color: #cfcccc;
+  font-weight: 300;
+}
 
 
 .form button{
