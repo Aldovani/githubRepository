@@ -8,9 +8,8 @@ h2,
 h3,
 p {
   margin: 0;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
 
 .warp-Card-repos {
   display: flex;
@@ -21,11 +20,36 @@ p {
   margin-right: auto;
 }
 
-.deletar{
 
-position: fixed;
-right: 40px;
-top:40px;
-height: 40px;
-width: 100px;
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.form input{
+  border: 0;
+  padding: 10px;
+  border-bottom-left-radius:10px ;
+  border-top-left-radius:10px ;
+  outline: none;
+  height: 35px;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+
+.form button{
+  border: 0;
+  border-bottom-right-radius:10px ;
+  border-top-right-radius:10px ;
+  height: 35px;
+  width: 100px;
+  font-weight: 900;
+  background: #43abfa;
+}
+
+.form button:disabled{
+  opacity: 0.5;
 }

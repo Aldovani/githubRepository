@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import "./style.css";
+
 export default function Header({ dados }) {
   return (
-    <header className="card-header">
-      <img src={`${dados.avatar_url}`} alt="" />
+    <motion.div
+      className="card-header"
+      animate={{ x: [-2000, 0] }}
+      transition={{ duration: 1.5,}}
+    >
+      <img className="avatar" src={`${dados.avatar_url}`} alt="" />
       <div className="text-header">
         <h1>{dados.login}</h1>
         {dados.bio === null ? (
@@ -11,6 +17,10 @@ export default function Header({ dados }) {
           <p>{dados.bio}</p>
         )}
       </div>
-    </header>
+      <div className="text-repos">
+        <span>{dados.public_repos}</span>
+        <p>Repositórios</p>
+      </div>
+    </motion.div>
   );
 }
