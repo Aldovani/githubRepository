@@ -1,13 +1,18 @@
 .avatar {
+  display: block;
   width: 100px;
   height: 100px;
-  border-radius: 100px;
+  border-radius: 8px;
+  padding: 1px;
+  background: #ebebeb;
 }
 .card-header {
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 50px;
+  padding: 10px;
   word-wrap: break-word;
 }
 
@@ -16,10 +21,11 @@
   margin-left: 15px;
   display: flex;
   flex-direction: column;
+  text-align: center;
   max-width: 400px;
   align-items: center;
 }
 
-.card-header .text-repos{
+.card-header .text-repos {
   text-align: center;
 }

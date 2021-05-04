@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import api from "./api/index";
 
 import Header from "./components/Header/Header";
-import Cardrepos from "./components/CardRepos/Cardrepos";
+import { CardRepository } from "./components/CardRepository/CardRepository";
+import Modal from "./components/Modal/Modal";
 
 import "./App.css";
-import Modal from "./components/Modal/Modal";
 
 function App() {
   const [dados, setDados] = useState();
@@ -26,21 +26,20 @@ function App() {
 
       const response = await api.get(`/users/${input}`);
       const repositories = await api.get(`/users/${input}/repos`);
-
       setRepos(repositories.data);
       setDados(response.data);
       setLoading(true);
-
-      setInput("");
     } catch ({ response }) {
+
       if (response.status === 404) {
         setMensagemError("Usuário não encontrado");
       } else if (response.status === 403) {
         setMensagemError("Falha ao buscar os dados");
       }
-      setInput("");
+      
       setOpenModal(true);
     }
+    setInput("");
   }
 
   return (
@@ -73,7 +72,7 @@ function App() {
 
           <div className="warp-Card-repos">
             {repos.map(function (e) {
-              return <Cardrepos key={e.id} repos={e} />;
+              return <CardRepository key={e.id} repository={e} />;
             })}
           </div>
         </>

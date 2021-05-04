@@ -1,0 +1,40 @@
+.card-repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background: #ebebeb;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  width: 350px;
+  padding: 25px;
+  word-wrap: break-word;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+.repo-name {
+  display: inline;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.repo-name a {
+  font-size: 14px;
+  font-weight: 900;
+  color: #0366d6;
+  text-decoration: none;
+}
+.description {
+  font-size: 12px;
+  color: #586069;
+}
+
+.language {
+  font-size: 12px;
+  color: #586069;
+  margin-top: 10px;
+}
+
+
